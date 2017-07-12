@@ -21,7 +21,7 @@ cd ~/envs
 ######################################################
 ## Install virtualenv
 pip3 install virtualenv
-#pip install virtual env    ## In case virtualenv was installed for 2.7
+#pip install virtualenv    ## In case virtualenv was installed for 2.7
 
 ######################################################
 
