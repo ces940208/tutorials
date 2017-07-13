@@ -98,7 +98,7 @@ Creation of a python environment with the 3.5 version named *py35*
 
 ```bash
 cd ~/Environments
-virtualenv -p /usr/bin/python3.5 py35
+virtualenv -p /usr/bin/python3.5 py35goatools
 ```
 
 To "turn on" the environment source the activate executable from that environment:
@@ -137,7 +137,7 @@ To create the list of libraries, read further in this file.
 cd ~/envs
 virtualenv -p /usr/bin/python3.5 py35bis
 source py35/bin/activate
-pip3 install -r foo.txt
+pip3 install -r py35goatools.txt
 ```
 
 
@@ -165,7 +165,7 @@ either in case you would like to copy/recreate this environment or
 in case you want to give a proper list of the libraries and versions required to run a given script.
 
 ```bash
-pip freeze --local > foo.txt
+pip freeze --local > py35goatools.txt
 ```
 
 
@@ -175,6 +175,16 @@ Once you don't require anymore a given virtual environment the way to remove it 
 directory
 
 ```bash
-rm -rf ~/Environments/py35/
+rm -rf ~/Environments/py35goatools/
 ```
 
+
+
+## SOURCES
+
+* Goatools: https://github.com/tanghaibao/goatools
+* GO_enrichment : https://github.com/enormandeau/go_enrichment
+* http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/
+* Video tutorial for virtualenvs: https://www.youtube.com/watch?v=N5vscPTWKOk
+* http://www.simononsoftware.com/virtualenv-tutorial-part-2/
+* https://iamzed.com/2009/05/07/a-primer-on-virtualenv/
