@@ -25,6 +25,7 @@ We'll create virtual environments for the other versions you'd like to use.
 
 
 
+
 ### a. Install pip on 2.7.X
 
 As of today, july 2017, `pip` will install pip on python 2.7.X.
@@ -66,6 +67,7 @@ pip3 install virtualenv
 
 
 
+
 ## 3. Create a directory where your environments will all be stored
 
 The tutorials advise to put this directory in your home, so let's follow their directions
@@ -76,6 +78,9 @@ mkdir ~/Environments
 
 
 
+
+
+
 ## 4. Create an environment
 
 To create an environment you need to call `virtualenv`,
@@ -83,6 +88,8 @@ give it a path (**-p**)to an executable python version,
 the default python will be taken if no argument is provided,
 and a name for your environment.
 The environment will be created by default in the current directory.
+
+
 
 
 ### a. Create and activate the environment
@@ -107,7 +114,6 @@ A little reminder of the environment you are using should appear in the prompt
 
 ### b. Install the required libraries
 
-
 Pip will allow you to install some libraries for python, 
 these libraries will only be available in the environment which is currently in use.
 
@@ -118,7 +124,25 @@ pip3 install statsmodels
 pip3 install goatools
 ```
 
-### c. Quitting your environment
+
+
+### c. Create an environment from a previous list of libraries
+
+Once you created an environment which is functionnal and
+you saved the list and version of the libraries used,
+you can re-use that list to install all the libraries  at the right versions at once.
+To create the list of libraries, read further in this file.
+
+```bash
+cd ~/envs
+virtualenv -p /usr/bin/python3.5 py35bis
+source py35/bin/activate
+pip3 install -r foo.txt
+```
+
+
+
+### d. Quitting your environment
 
 To quit the environmment simply type `deactivate`
 
@@ -127,7 +151,11 @@ deactivate
 ```
 
 
+
+
+
 ## 5. Saving list of libraries and Removing a virtual environment
+
 
 
 ### a. Save the list of libraries installed and used in an environment
@@ -140,6 +168,7 @@ in case you want to give a proper list of the libraries and versions required to
 pip freeze --local > foo.txt
 ```
 
+
 ### b. Remove a virtual environment
 
 Once you don't require anymore a given virtual environment the way to remove it is to remove it's
@@ -148,3 +177,4 @@ directory
 ```bash
 rm -rf ~/Environments/py35/
 ```
+
